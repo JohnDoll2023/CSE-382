@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResponsiveLayoutsExercise.MainPage">
+
+    <StackLayout Padding="0,40,0,0">
+        <StackLayout x:Name="top" Orientation="Vertical">
+            <Button Text="A"/>
+            <Button Text="B"/>
+        </StackLayout>
+        <StackLayout x:Name="middle" Orientation="Vertical">
+            <Button Text="C"/>
+            <Button Text="D"/>
+        </StackLayout>
+        <StackLayout x:Name="bottom" Orientation="Vertical">
+            <Button Text="E"/>
+            <Button Text="F"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
+

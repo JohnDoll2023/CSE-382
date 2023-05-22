@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MarginAndPadding.ClusterPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="BoxSize">20</x:Double>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <Frame BorderColor="Black">
+                <StackLayout x:Name="boxesLayout" >
+                    <StackLayout x:Name="cluster1">
+                        <BoxView x:Name="redBox1" Color="Red" HeightRequest="{StaticResource BoxSize}" />
+                        <BoxView x:Name="greenBox1" Color="Green" HeightRequest="{StaticResource BoxSize}"/>
+                        <BoxView x:Name="blueBox1" Color="Blue" HeightRequest="{StaticResource BoxSize}"/>
+                    </StackLayout>
+                    <StackLayout x:Name="cluster2">
+                        <BoxView x:Name="redBox2" Color="Red" HeightRequest="{StaticResource BoxSize}"/>
+                        <BoxView x:Name="greenBox2" Color="Green" HeightRequest="{StaticResource BoxSize}"/>
+                        <BoxView x:Name="blueBox2" Color="Blue" HeightRequest="{StaticResource BoxSize}"/>
+                    </StackLayout>
+                    <StackLayout x:Name="cluster3">
+                        <BoxView x:Name="redBox3" Color="Red" HeightRequest="{StaticResource BoxSize}"/>
+                        <BoxView x:Name="greenBox3" Color="Green" HeightRequest="{StaticResource BoxSize}"/>
+                        <BoxView x:Name="blueBox3" Color="Blue" HeightRequest="{StaticResource BoxSize}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="marginSlider" Minimum="-50" Maximum="50" Value="0"
+                               WidthRequest="300" ValueChanged="MarginChanged"/>
+                <Label x:Name="marginLabel" Text="Margin = 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="paddingSlider" Minimum="-50" Maximum="50" Value="0"
+                                WidthRequest="300" ValueChanged="PaddingChanged" />
+                <Label x:Name="paddingLabel" Text="Padding = 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="spacingSlider" Minimum="-50" Maximum="50" Value="0"
+                                WidthRequest="300" ValueChanged="SpacingChanged" />
+                <Label x:Name="spacingLabel" Text="Spacing = 0"/>
+            </StackLayout>
+            <Button Text="Reset" Clicked="ResetClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

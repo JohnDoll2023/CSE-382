@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USLocations", "USLocations\USLocations.csproj", "{50809E98-910C-4E0D-B7A4-9B44F0CC2A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance", "Distance\Distance.csproj", "{7D303621-6D7A-493F-888D-BC3156BF1784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{FF090D74-F7D1-49D0-A21F-C66F590B1F43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50809E98-910C-4E0D-B7A4-9B44F0CC2A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50809E98-910C-4E0D-B7A4-9B44F0CC2A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50809E98-910C-4E0D-B7A4-9B44F0CC2A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50809E98-910C-4E0D-B7A4-9B44F0CC2A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D303621-6D7A-493F-888D-BC3156BF1784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D303621-6D7A-493F-888D-BC3156BF1784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D303621-6D7A-493F-888D-BC3156BF1784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D303621-6D7A-493F-888D-BC3156BF1784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF090D74-F7D1-49D0-A21F-C66F590B1F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF090D74-F7D1-49D0-A21F-C66F590B1F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF090D74-F7D1-49D0-A21F-C66F590B1F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF090D74-F7D1-49D0-A21F-C66F590B1F43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D60FC739-5703-4D00-BF71-37C8B95F79AF}
+	EndGlobalSection
+EndGlobal

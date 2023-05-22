@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutOptions.Example1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HeightRequest="200" BorderColor="Red">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="B1" VerticalOptions="Start"/>
+                    <Button Text="B2" VerticalOptions="Center"/>
+                    <Button Text="B3" VerticalOptions="End"    WidthRequest="100"/>
+                    <Button Text="B4" VerticalOptions="Fill"   HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="400" BorderColor="Red">
+                <StackLayout Orientation="Vertical">
+                    <Button Text="B1" VerticalOptions="StartAndExpand"/>
+                    <Button Text="B2"/>
+                    <Button Text="B3"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

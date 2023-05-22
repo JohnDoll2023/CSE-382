@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SportStat.TeamPlayers">
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name" WidthRequest="170"/>
+                <Label Text="Age" WidthRequest="50"/>
+                <Label Text="Games" WidthRequest="60"/>
+                <Label x:Name="goalsLabel" Text="Goals" WidthRequest="60"/>
+                <Label x:Name="assistsLabel" Text="Assists" WidthRequest="60"/>
+            </StackLayout>
+            <StackLayout>
+                <ListView x:Name="playersLV"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Add Player" Clicked="Button_Clicked"/>
+                <Button Text="Update Team" Clicked="Button_Clicked"/>
+                <Button Text="Remove Team" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

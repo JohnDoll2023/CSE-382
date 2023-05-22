@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project3calc.MainPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <!--Button and label styling-->
+            <Style x:Key="numPad" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="DarkSlateGray"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+            <Style x:Key="numOperations" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Tan"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+            <Style x:Key="financeOperations" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="CadetBlue"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+            <Style x:Key="clearButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+            </Style>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontSize" Value="40"/>
+            </Style>
+            <Style x:Key="financeDetailsLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style x:Key="financeDetailsAttribute" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,5,5">
+            <!--Nnumber label-->
+            <StackLayout>
+                 <Label x:Name="nLabel" PropertyChanged="nLabel_PropertyChanged" Padding="0,30,0,0" Text="0" Style="{StaticResource LabelStyle}" />
+            </StackLayout>
+            <!-- Add grid with buttons -->
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                <Grid Padding="0,0,0,0" HeightRequest="600">
+                    <!-- Add row and column definitions -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Numeric buttons -->
+                    <Button Text="1" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="10" Grid.Column="1"/>
+                    <Button Text="2" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="10" Grid.Column="2"/>
+                    <Button Text="3" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="10" Grid.Column="3"/>
+                    <Button Text="4" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="9" Grid.Column="1"/>
+                    <Button Text="5" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="9" Grid.Column="2"/>
+                    <Button Text="6" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="9" Grid.Column="3"/>
+                    <Button Text="7" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="8" Grid.Column="1"/>
+                    <Button Text="8" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="8" Grid.Column="2"/>
+                    <Button Text="9" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="8" Grid.Column="3"/>
+                    <Button Text="0" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="11" Grid.Column="1"/>
+                    <Button Text="." IsEnabled="False" Style="{StaticResource numPad}" Grid.Row="11" Grid.Column="2"/>
+                    <Button Text="+/-" Clicked="Button_Clicked" Style="{StaticResource numPad}" Grid.Row="11" Grid.Column="3"/>
+
+                    <!--Arithmetic buttons-->
+                    <Button Text="FINAL" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="3" Grid.Column="4" Grid.RowSpan="3"/>
+                    <Button Text="1/X" IsEnabled="False" Style="{StaticResource numOperations}" Grid.Row="7" Grid.Column="0"/>
+                    <Button Text="%" IsEnabled="False" Style="{StaticResource numOperations}" Grid.Row="7" Grid.Column="1"/>
+                    <Button Text="/" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="7" Grid.Column="2"/>
+                    <Button Text="X" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="7" Grid.Column="3"/>
+                    <Button Text="-" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="7" Grid.Column="4"/>
+                    <Button Text="M+" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="8" Grid.Column="0"/>
+                    <Button Text="M-" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="9" Grid.Column="0"/>
+                    <Button Text="MR" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="10" Grid.Column="0"/>
+                    <Button Text="MC" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="11" Grid.Column="0"/>
+                    <Button Text="+" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="8" Grid.Column="4" Grid.RowSpan="2"/>
+                    <Button Text="=" Clicked="Arithmetic_Button_Clicked" Style="{StaticResource numOperations}" Grid.Row="10" Grid.Column="4" Grid.RowSpan="2"/>
+
+                    <!--Finance buttons-->
+                    <Button Text="START" x:Name="start" Clicked="Finance_Button_Clicked" Style="{StaticResource financeOperations}" Grid.Row="6" Grid.Column="0"/>
+                    <Button Text="YEARS" x:Name="years" Clicked="Finance_Button_Clicked" Style="{StaticResource financeOperations}" Grid.Row="6" Grid.Column="1"/>
+                    <Button Text="RATE" x:Name="rate" Clicked="Finance_Button_Clicked" Style="{StaticResource financeOperations}" Grid.Row="6" Grid.Column="2"/>
+                    <Button Text="INVEST" x:Name="invest" Clicked="Finance_Button_Clicked" Style="{StaticResource financeOperations}" Grid.Row="6" Grid.Column="3"/>
+                    <Button Text="FREQ" Clicked="Freq_Button_Clicked" Style="{StaticResource financeOperations}" Grid.Row="6" Grid.Column="4"/>
+
+                    <!--Clear button-->
+                    <Button Text="C" Clicked="Button_Clicked" Style="{StaticResource clearButton}" Grid.Row="0" Grid.Column="4" Grid.RowSpan="3"/>
+
+                    <!--Finance box details-->
+                    <Frame BackgroundColor="Black" Grid.Row="0" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="4"/>
+                    <Label Text="Starting amount:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="$0" x:Name="saLabel" Grid.Row="0" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                    <Label Text="Years:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="30" x:Name="yLabel" Grid.Row="1" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                    <Label Text="Rate of return:" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="5%" x:Name="rorLabel" Grid.Row="2" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                    <Label Text="Regular Investment:" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="$500" x:Name="riLabel" Grid.Row="3" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                    <Label Text="Frequency of investment:" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="Monthly" x:Name="fLabel" Grid.Row="4" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                    <Label Text="Final Balance:" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource financeDetailsLabel}"/>
+                    <Label Text="$0" x:Name="fbLabel" Grid.Row="5" Grid.Column="3" Style="{StaticResource financeDetailsAttribute}"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
+

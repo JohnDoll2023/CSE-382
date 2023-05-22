@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RunningApp.SettingsPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BackgroundColor" Value="Orange"/>
+            </Style>
+            <Style TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <StackLayout Orientation="Horizontal">
+            <Label Text="Gender"/>
+                <Picker x:Name="gender" SelectedItem="Male" SelectedIndexChanged="gender_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Switch x:Name="measurementSwitch" Toggled="Switch_Toggled"/>
+                <Label x:Name="measurementLabel" Text="Miles"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="DOB"/>
+                <DatePicker x:Name="dob" DateSelected="dob_DateSelected"/>
+            </StackLayout>
+            <Button Text="Credits" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

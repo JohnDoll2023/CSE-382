@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="GUITesting.MainPage">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Number 1" FontSize="Large"/>
+            <Entry x:Name="entry1" WidthRequest="100"
+                   AutomationId="FirstEntry"
+                   Text="0" FontSize="Large"/>
+        </StackLayout>
+         <StackLayout Orientation="Horizontal">
+            <Label Text="Number 2" FontSize="Large"/>
+            <Entry x:Name="entry2" WidthRequest="100"
+                   AutomationId="SecondEntry"
+                   Text="0" FontSize="Large"/>
+        </StackLayout>
+        <Label Text="99" x:Name="sumLabel" AutomationId="SummationLabel" FontSize="Large"/>
+        <Button Text="Add" AutomationId="AddButton" Clicked="Button_Clicked"/>
+   </StackLayout>
+</ContentPage>

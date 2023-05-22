@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RunningApp.ActivitiesPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BackgroundColor" Value="Orange"/>
+            </Style>
+            <Style TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <DatePicker x:Name="dp"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Distance Miles" x:Name="measurementLabel"/>
+                <Picker x:Name="measurement1"/>
+                <Label Text="."/>
+                <Picker x:Name="measurement2"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Time Hours"/>
+                <Picker x:Name="hours"/>
+                <Label Text=":"/>
+                <Picker x:Name="mins"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Heart Rate"/>
+                <Picker x:Name="heartrate"/>
+            </StackLayout>
+            <StackLayout>
+                <ListView x:Name="lvActivities" HeightRequest="400" ItemSelected="ItemSelected"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Add" Clicked="Button_Clicked"/>
+                <Button Text="Update" Clicked="Button_Clicked"/>
+                <Button Text="Delete" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

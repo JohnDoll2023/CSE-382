@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SportStat.UpdatePlayerPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/> 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Name:" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="nameLabel" WidthRequest="200" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Age:" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="ageLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Games Played:" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="gpLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="2" Grid.Column="1"/>
+                <Label x:Name="goals" Text="Goals:" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="goalLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="assists" Text="Assists:" VerticalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="assistsLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="4" Grid.Column="1"/>
+                <Label x:Name="runs" Text="Runs:" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="runsLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="rbi" Text="RBI:" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="rbiLabel" Keyboard="Numeric" WidthRequest="40" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="Gender:" VerticalOptions="CenterAndExpand" Grid.Row="5" Grid.Column="0"/>
+                <Picker x:Name="genderPicker" WidthRequest="100" Grid.Row="5" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Class Standing:" VerticalOptions="CenterAndExpand" Grid.Row="6" Grid.Column="0"/>
+                <Picker x:Name="classPicker" WidthRequest="150" Grid.Row="6" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Freshman</x:String>
+                        <x:String>Sophomore</x:String>
+                        <x:String>Junior</x:String>
+                        <x:String>Senior</x:String>
+                        <x:String>Grad Student</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Update Player" Clicked="Button_Clicked"/>
+                <Button Text="Cancel" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

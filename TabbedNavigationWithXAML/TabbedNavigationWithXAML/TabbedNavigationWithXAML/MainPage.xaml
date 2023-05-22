@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TabbedNavigationWithXAML.MainPage">
+    <TabbedPage.SelectedTabColor>Green</TabbedPage.SelectedTabColor>
+    <TabbedPage.BarBackgroundColor>Beige</TabbedPage.BarBackgroundColor>
+    <TabbedPage.UnselectedTabColor>Black</TabbedPage.UnselectedTabColor>
+    <ContentPage Title="Registration" Padding="0,40,0,0">
+        <StackLayout>
+            <Entry x:Name="name" Text="Name" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Food" Padding="0,40,0,0">
+        <StackLayout>
+            <Picker x:Name="food">
+                <Picker.Items>
+                    <x:String>Chicken</x:String>
+                    <x:String>Roast Beef</x:String>
+                    <x:String>Pasta</x:String>
+                </Picker.Items>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="About" Padding="0,40,0,0">
+        <Label Text="Demo"/>
+    </ContentPage>
+</TabbedPage>

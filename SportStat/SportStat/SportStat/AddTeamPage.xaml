@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SportStat.AddTeamPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Name:" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="name" WidthRequest="200" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Wins:" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="wins" Keyboard="Numeric" WidthRequest="40" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Losses:" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="losses" Keyboard="Numeric" WidthRequest="40" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Sport:" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="0"/>
+                <Picker x:Name="sport" WidthRequest="150" Grid.Row="3" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Broomball</x:String>
+                        <x:String>Softball</x:String>
+                        <x:String>Soccer</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add Team" Clicked="Button_Clicked"/>
+                <Button Text="Cancel" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

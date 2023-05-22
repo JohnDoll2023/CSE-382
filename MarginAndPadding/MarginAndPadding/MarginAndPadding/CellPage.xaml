@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MarginAndPadding.CellPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <Grid x:Name="gridLayout" HeightRequest="600">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="cell00" Text="00" Grid.Row="0" Grid.Column="0" BackgroundColor="Red"/>
+                <Label x:Name="cell01" Text="01" Grid.Row="0" Grid.Column="1" BackgroundColor="Green" />
+                <Label x:Name="cell10" Text="10" Grid.Row="1" Grid.Column="0" BackgroundColor="Blue" />
+                <Label x:Name="cell11" Text="11" Grid.Row="1" Grid.Column="1" BackgroundColor="Magenta" />
+                <Label x:Name="cell20" Text="20" Grid.Row="2" Grid.Column="0" BackgroundColor="Cyan" />
+                <Label x:Name="cell21" Text="21" Grid.Row="2" Grid.Column="1" BackgroundColor="Yellow" />
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="marginSlider" Minimum="-50" Maximum="50" Value="0"
+                               WidthRequest="300" ValueChanged="MarginChanged"/>
+                <Label x:Name="marginLabel" Text="Margin = 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="paddingSlider" Minimum="-50" Maximum="50" Value="0"
+                                WidthRequest="300" ValueChanged="PaddingChanged" />
+                <Label x:Name="paddingLabel" Text="Padding = 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="spacingSlider" Minimum="-50" Maximum="50" Value="0" IsEnabled="False"
+                                WidthRequest="300" ValueChanged="SpacingChanged" />
+                <Label x:Name="spacingLabel" Text="Spacing = 0"/>
+            </StackLayout>
+            <Button Text="Reset" Clicked="ResetClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

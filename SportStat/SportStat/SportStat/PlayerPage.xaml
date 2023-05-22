@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SportStat.PlayerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="1000"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Age:" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="ageLabel" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Games Played:" Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="gpLabel"  Grid.Row="1" Grid.Column="1"/>
+                <Label x:Name="goals" Text="Goals:" Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="goalLabel" Grid.Row="2" Grid.Column="1"/>
+                <Label x:Name="assists" Text="Assists:" Grid.Row="3" Grid.Column="0"/>
+                <Label x:Name="assistsLabel" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="runs" Text="Runs:" Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="runsLabel" Grid.Row="2" Grid.Column="1"/>
+                <Label x:Name="rbi" Text="RBI:" Grid.Row="3" Grid.Column="0"/>
+                <Label x:Name="rbiLabel" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Gender:" Grid.Row="4" Grid.Column="0"/>
+                <Label x:Name="genderLabel" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="Class Standing:" Grid.Row="5" Grid.Column="0"/>
+                <Label x:Name="csLabel" Grid.Row="5" Grid.Column="1"/>
+                <Button Text="Update Player" Clicked="Button_Clicked" Grid.Row="6" Grid.Column="0"/>
+                <Button Text="Remove Player" Clicked="Button_Clicked" Grid.Row="6" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

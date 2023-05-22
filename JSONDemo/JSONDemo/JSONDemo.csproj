@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC1D174A-1070-4207-9C4A-07925A7ACD44}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>JSONDemo</RootNamespace>
+    <AssemblyName>JSONDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JSONDemo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="sample1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sample2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties sample2_1json__JsonSchema="{&quot;results&quot;:[{&quot;vegetarian&quot;:true,&quot;vegan&quot;:true,&quot;glutenFree&quot;:true,&quot;dairyFree&quot;:true,&quot;veryHealthy&quot;:true,&quot;cheap&quot;:false,&quot;veryPopular&quot;:false,&quot;sustainable&quot;:false,&quot;weightWatcherSmartPoints&quot;:12,&quot;gaps&quot;:&quot;no&quot;,&quot;lowFodmap&quot;:false,&quot;aggregateLikes&quot;:3,&quot;spoonacularScore&quot;:94.0,&quot;healthScore&quot;:100.0,&quot;creditsText&quot;:&quot;Foodista.com – The Cooking Encyclopedia Everyone Can Edit&quot;,&quot;license&quot;:&quot;CC BY 3.0&quot;,&quot;sourceName&quot;:&quot;Foodista&quot;,&quot;pricePerServing&quot;:252.69,&quot;id&quot;:646043,&quot;title&quot;:&quot;Gujarati Dry Mung Bean Curry&quot;,&quot;readyInMinutes&quot;:45,&quot;servings&quot;:4,&quot;sourceUrl&quot;:&quot;http://www.foodista.com/recipe/G6ZJW56S/gujarati-dry-mung-bean-curry&quot;,&quot;image&quot;:&quot;https://spoonacular.com/recipeImages/646043-312x231.jpg&quot;,&quot;imageType&quot;:&quot;jpg&quot;,&quot;summary&quot;:&quot;The recipe Gujarati Dry Mung Bean Curry is ready &lt;b&gt;in around 45 minutes&lt;/b&gt; and is definitely an excellent &lt;b&gt;gluten free and vegan&lt;/b&gt; option for lovers of Indian food. For &lt;b&gt;$2.53 per serving&lt;/b&gt;, this recipe &lt;b&gt;covers 45%&lt;/b&gt; of your daily requirements of vitamins and minerals. This recipe makes 4 servings with &lt;b&gt;417 calories&lt;/b&gt;, &lt;b&gt;23g of protein&lt;/b&gt;, and &lt;b&gt;6g of fat&lt;/b&gt; each. This recipe from Foodista has 2 fans. It works well as an affordable main course. A mixture of salt, sugar, cinnamon powder, and a handful of other ingredients are all it takes to make this recipe so flavorful. To use up the cumin seeds you could follow this main course with the &lt;a href=\&quot;https://spoonacular.com/recipes/indian-fried-banana-cakes-mangalore-buns-899949\&quot;&gt;Indian Fried Banana Cakes (Mangalore Buns)&lt;/a&gt; as a dessert. All things considered, we decided this recipe &lt;b&gt;deserves a spoonacular score of 94%&lt;/b&gt;. This score is amazing. Try &lt;a href=\&quot;https://spoonacular.com/recipes/uncle-bills-mung-bean-curry-113139\&quot;&gt;Uncle Bill's Mung Bean Curry&lt;/a&gt;, &lt;a href=\&quot;https://spoonacular.com/recipes/mung-bean-crepes-34435\&quot;&gt;Mung Bean Crepes&lt;/a&gt;, and &lt;a href=\&quot;https://spoonacular.com/recipes/korean-mung-with-bean-34423\&quot;&gt;Korean Mung With Bean&lt;/a&gt; for similar recipes.&quot;,&quot;cuisines&quot;:[&quot;Indian&quot;,&quot;Asian&quot;],&quot;dishTypes&quot;:[&quot;lunch&quot;,&quot;main course&quot;,&quot;main dish&quot;,&quot;dinner&quot;],&quot;diets&quot;:[&quot;gluten free&quot;,&quot;dairy free&quot;,&quot;lacto ovo vegetarian&quot;,&quot;vegan&quot;],&quot;occasions&quot;:[],&quot;analyzedInstructions&quot;:[{&quot;name&quot;:&quot;&quot;,&quot;steps&quot;:[{&quot;number&quot;:1,&quot;step&quot;:&quot;Wash the mung beans and boil them in plenty of hot water with a pinch of baking powder until al-dente. If you have a pressure cooker thats about 6-7 whistles.&quot;,&quot;ingredients&quot;:[{&quot;id&quot;:18369,&quot;name&quot;:&quot;baking powder&quot;,&quot;localizedName&quot;:&quot;baking powder&quot;,&quot;image&quot;:&quot;white-powder.jpg&quot;},{&quot;id&quot;:16080,&quot;name&quot;:&quot;mung beans&quot;,&quot;localizedName&quot;:&quot;mung beans&quot;,&quot;image&quot;:&quot;mung-beans.png&quot;},{&quot;id&quot;:14412,&quot;name&quot;:&quot;water&quot;,&quot;localizedName&quot;:&quot;water&quot;,&quot;image&quot;:&quot;water.png&quot;}],&quot;equipment&quot;:[{&quot;id&quot;:404658,&quot;name&quot;:&quot;pressure cooker&quot;,&quot;localizedName&quot;:&quot;pressure cooker&quot;,&quot;image&quot;:&quot;pressure-cooker.jpg&quot;}]},{&quot;number&quot;:2,&quot;step&quot;:&quot;Drain and set aside.In a large pan heat the oil and add the mustard seeds (wait for them to pop) then add the cumin seeds, asafoetida, curry leaves, garlic and chillies. Saut until aromatic. Obviously dont let it burn.&quot;,&quot;ingredients&quot;:[{&quot;id&quot;:2024,&quot;name&quot;:&quot;mustard seeds&quot;,&quot;localizedName&quot;:&quot;mustard seeds&quot;,&quot;image&quot;:&quot;mustard-seeds.png&quot;},{&quot;id&quot;:93604,&quot;name&quot;:&quot;curry leaves&quot;,&quot;localizedName&quot;:&quot;curry leaves&quot;,&quot;image&quot;:&quot;curry-leaves.jpg&quot;},{&quot;id&quot;:2014,&quot;name&quot;:&quot;cumin seeds&quot;,&quot;localizedName&quot;:&quot;cumin seeds&quot;,&quot;image&quot;:&quot;ground-cumin.jpg&quot;},{&quot;id&quot;:1032035,&quot;name&quot;:&quot;asafoetida&quot;,&quot;localizedName&quot;:&quot;asafoetida&quot;,&quot;image&quot;:&quot;curry-powder.jpg&quot;},{&quot;id&quot;:11819,&quot;name&quot;:&quot;chili pepper&quot;,&quot;localizedName&quot;:&quot;chili pepper&quot;,&quot;image&quot;:&quot;red-chili.jpg&quot;},{&quot;id&quot;:11215,&quot;name&quot;:&quot;garlic&quot;,&quot;localizedName&quot;:&quot;garlic&quot;,&quot;image&quot;:&quot;garlic.png&quot;},{&quot;id&quot;:4582,&quot;name&quot;:&quot;cooking oil&quot;,&quot;localizedName&quot;:&quot;cooking oil&quot;,&quot;image&quot;:&quot;vegetable-oil.jpg&quot;},{&quot;id&quot;:0,&quot;name&quot;:&quot;pop&quot;,&quot;localizedName&quot;:&quot;pop&quot;,&quot;image&quot;:&quot;&quot;}],&quot;equipment&quot;:[{&quot;id&quot;:404645,&quot;name&quot;:&quot;frying pan&quot;,&quot;localizedName&quot;:&quot;frying pan&quot;,&quot;image&quot;:&quot;pan.png&quot;}]},{&quot;number&quot;:3,&quot;step&quot;:&quot;Add the tomatoes, turmeric and mung beans and cook for two minutes. Be careful not to mash it up as you stir.&quot;,&quot;ingredients&quot;:[{&quot;id&quot;:16080,&quot;name&quot;:&quot;mung beans&quot;,&quot;localizedName&quot;:&quot;mung beans&quot;,&quot;image&quot;:&quot;mung-beans.png&quot;},{&quot;id&quot;:11529,&quot;name&quot;:&quot;tomato&quot;,&quot;localizedName&quot;:&quot;tomato&quot;,&quot;image&quot;:&quot;tomato.png&quot;},{&quot;id&quot;:2043,&quot;name&quot;:&quot;turmeric&quot;,&quot;localizedName&quot;:&quot;turmeric&quot;,&quot;image&quot;:&quot;turmeric.jpg&quot;}],&quot;equipment&quot;:[],&quot;length&quot;:{&quot;number&quot;:2,&quot;unit&quot;:&quot;minutes&quot;}},{&quot;number&quot;:4,&quot;step&quot;:&quot;Add the salt, sugar, lemon juice and cinnamon powder and cook for a further two minutes.Throw in the chopped coriander, combine and serve.&quot;,&quot;ingredients&quot;:[{&quot;id&quot;:1012010,&quot;name&quot;:&quot;ground cinnamon&quot;,&quot;localizedName&quot;:&quot;ground cinnamon&quot;,&quot;image&quot;:&quot;cinnamon.jpg&quot;},{&quot;id&quot;:9152,&quot;name&quot;:&quot;lemon juice&quot;,&quot;localizedName&quot;:&quot;lemon juice&quot;,&quot;image&quot;:&quot;lemon-juice.jpg&quot;},{&quot;id&quot;:1012013,&quot;name&quot;:&quot;coriander&quot;,&quot;localizedName&quot;:&quot;coriander&quot;,&quot;image&quot;:&quot;ground-coriander.jpg&quot;},{&quot;id&quot;:19335,&quot;name&quot;:&quot;sugar&quot;,&quot;localizedName&quot;:&quot;sugar&quot;,&quot;image&quot;:&quot;sugar-in-bowl.png&quot;},{&quot;id&quot;:2047,&quot;name&quot;:&quot;salt&quot;,&quot;localizedName&quot;:&quot;salt&quot;,&quot;image&quot;:&quot;salt.jpg&quot;}],&quot;equipment&quot;:[],&quot;length&quot;:{&quot;number&quot;:2,&quot;unit&quot;:&quot;minutes&quot;}}]}],&quot;spoonacularSourceUrl&quot;:&quot;https://spoonacular.com/gujarati-dry-mung-bean-curry-646043&quot;}],&quot;offset&quot;:0,&quot;number&quot;:25,&quot;totalResults&quot;:1}" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

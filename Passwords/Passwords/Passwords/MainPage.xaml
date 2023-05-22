@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Passwords.MainPage">
+    <StackLayout Padding="0,70,0,0">
+        <Frame BorderColor="Black">
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Username "/>
+                    <Entry x:Name="username" Placeholder="username" Unfocused="UsernameUnfocused" WidthRequest="300"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Password"/>
+                    <Entry x:Name="password" Placeholder="password" IsPassword="True" TextChanged="PWTextChanged" WidthRequest="300" />
+                </StackLayout>
+                <Button Text="Login" Clicked="LoginClicked"/>
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Black">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Plain text of entry"/>
+                    <Label x:Name="pwPlainText"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Secure storage (key=username) "/>
+                    <Label x:Name="ssUsername"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Secure storage (key=password) "/>
+                    <Label x:Name="ssPassword"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
