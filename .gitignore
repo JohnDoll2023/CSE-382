@@ -2,7 +2,7 @@
 *.d
 
 # to push to github
-cs/big.txt
+#cs/big.txt
 
 # Compiled Object files
 *.slo
